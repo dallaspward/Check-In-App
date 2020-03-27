@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CheckInGridComponent } from './check-in-grid/check-in-grid.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CheckInGridComponent
   ],
   imports: [
     BrowserModule,
