@@ -1,7 +1,15 @@
 <p>Select your name:</p>
 
-<ul>
+<mat-form-field>
+  <mat-label>HI</mat-label>
+</mat-form-field>
+
+<ol>
   <li *ngFor="let vol of volunteer">
-    {{vol .name}}  
+    <mat-form-field>
+      <button mat-raised-button (click)="openDialog()">
+        {{vol.name}}
+      </button>
+    </mat-form-field>  
   </li>
-</ul>
+</ol>
