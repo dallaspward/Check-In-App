@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Volunteer } from '../volunteer/volunteer';
+import { MatDialog } from '@angular/material/dialog';
+import { CheckInPopupComponent } from '../check-in-popup/check-in-popup.component'
 
 @Component({
   selector: 'app-check-in-grid',
@@ -18,7 +20,18 @@ export class CheckInGridComponent implements OnInit {
     {id: 7, name: "David Ward", isCheckedIn: false}
   ];
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(CheckInPopupComponent, {
+      width: '250px',
+      data: {name: this.volunteer[1].name}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 
   ngOnInit() {
   }
