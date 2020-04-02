@@ -26,14 +26,19 @@ import { CheckInPopupComponent } from './check-in-popup/check-in-popup.component
     BrowserAnimationsModule,
     MatInputModule,
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   exports: [
     MatInputModule,
     MatTableModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MatDialog,
+      useValue: {}
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
