@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Volunteer } from '../volunteer/volunteer';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CheckInPopupComponent } from '../check-in-popup/check-in-popup.component'
 
 @Component({
